@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://automationpractice.com/" />
+<title>SignUp</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SignUp</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/index.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Login - My Store</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>abc_123@xyz.com</td>
+	<td>emailId</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=email_create</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email_create</td>
+	<td>${emailId}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=SubmitCreate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.page-subheading</td>
+	<td>Your personal information</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1.page-heading</td>
+	<td>Create an account</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=email</td>
+	<td>${emailId}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=id_gender1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=customer_firstname</td>
+	<td>Amit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=customer_lastname</td>
+	<td>Kumar</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=passwd</td>
+	<td>Test123456</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=days</td>
+	<td>label=regexp:1\s+</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=months</td>
+	<td>label=regexp:January\s</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#months &gt; option[value=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=years</td>
+	<td>label=regexp:1981\s+</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1981&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=newsletter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=optin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstname</td>
+	<td>Amit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastname</td>
+	<td>Kumar</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=company</td>
+	<td>Test Org Ltd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address1</td>
+	<td>New York</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>New York</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=id_state</td>
+	<td>label=New York</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;32&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=postcode</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone_mobile</td>
+	<td>1234506789</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submitAccount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Sign out</td>
+	<td>Sign out</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span</td>
+	<td>Amit Kumar</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
