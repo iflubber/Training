@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdvancedUIActions {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		//instantiating a Firefox WebDriver object
 		WebDriver driver = new FirefoxDriver();
 		
@@ -57,12 +57,13 @@ public class AdvancedUIActions {
 		int n = (driver.findElements(By.xpath(".//*[@id='sortable']/li"))).size();
 		
 		Actions builder = new Actions(driver);
-		for(int i=n;i>=1;i--) {
+		for(int i=1;i<n;i++) {
 			Action sort = builder.clickAndHold(driver.findElement(By.xpath(".//*[@id='sortable']/li[" + n + "]")))
-								.moveToElement(driver.findElement(By.xpath(".//*[@id='sortable']/li[1]")))
-								.release(driver.findElement(By.xpath(".//*[@id='sortable']/li[1]")))
+								.moveToElement(driver.findElement(By.xpath(".//*[@id='sortable']/li[" + i + "]")))
+								.release(driver.findElement(By.xpath(".//*[@id='sortable']/li[" + i + "]")))
 								.build();
 			sort.perform();
+			Thread.sleep(3000);
 		}
 	}
 
