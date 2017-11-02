@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Google Search: selenium]]>
+    </line>
+    <line>
+      <![CDATA[Google Search: testng]]>
+    </line>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="49702" started-at="2017-11-01T08:28:53Z" finished-at="2017-11-01T08:29:43Z">
+    <groups>
+      <group name="group1">
+        <method signature="TestNgSeleniumTest.testGoogleSearch1()[pri:0, instance:learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest@53b32d7]" name="testGoogleSearch1" class="learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest"/>
+      </group> <!-- group1 -->
+    </groups>
+    <test name="Selenium" duration-ms="49702" started-at="2017-11-01T08:28:53Z" finished-at="2017-11-01T08:29:43Z">
+      <class name="learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest@53b32d7]" name="setUp" is-config="true" duration-ms="19110" started-at="2017-11-01T13:58:53Z" finished-at="2017-11-01T13:59:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGoogleSearch1()[pri:0, instance:learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest@53b32d7]" name="testGoogleSearch1" duration-ms="15527" started-at="2017-11-01T13:59:13Z" finished-at="2017-11-01T13:59:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Google Search: selenium]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGoogleSearch1 -->
+        <test-method status="PASS" signature="testGoogleSearch2(java.lang.String)[pri:0, instance:learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest@53b32d7]" name="testGoogleSearch2" duration-ms="12820" started-at="2017-11-01T13:59:28Z" finished-at="2017-11-01T13:59:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testng]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Google Search: testng]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGoogleSearch2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest@53b32d7]" name="tearDown" is-config="true" duration-ms="2136" started-at="2017-11-01T13:59:41Z" finished-at="2017-11-01T13:59:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest -->
+    </test> <!-- Selenium -->
+  </suite> <!-- Test Suite -->
+</testng-results>

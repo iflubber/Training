@@ -24,12 +24,12 @@ public class RunOnIE {
 		//browserName=internet explorer, initialBrowserUrl=http://localhost:1263/, javascriptEnabled=true, ignoreProtectedModeSettings=false, 
 		//enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
 
-//		cap.setCapability(CapabilityType.BROWSER_NAME, "IE");
+		cap.setCapability(CapabilityType.BROWSER_NAME, "IE");
 //		cap.setCapability("initialBrowserUrl", "http://demoqa.com/");
-//		cap.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL, "http://demoqa.com/");
+		cap.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL, "http://demoqa.com/");
 //		cap.setCapability("ignoreProtectedModeSettings", true);
-//		cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-//		cap.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+		cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		cap.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
 //		cap.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 		
 		//instantiating an IE WebDriver object

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--suite name="Test Suite" parallel="methods" thread-count="2"-->
+<suite name="Test Suite">
+<test name="Selenium">
+<parameter name="searchKey" value="testng"/>
+<groups>
+<run>
+<!-- include name="group1"/-->
+</run>
+</groups>
+<classes>
+<class name="learn.selenium.webdriver.selenium2.withTestNg.TestNgSeleniumTest"/>
+</classes>
+</test>
+</suite>

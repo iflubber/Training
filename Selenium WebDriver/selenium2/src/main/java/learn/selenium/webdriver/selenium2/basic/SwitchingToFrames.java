@@ -23,7 +23,7 @@ public class SwitchingToFrames {
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.titleContains("Tryit"));
 		
-//		driver.switchTo().frame("iframeResult");
+		driver.switchTo().frame("iframeResult");
 		
 		driver.findElement(By.tagName("button")).click();
 		

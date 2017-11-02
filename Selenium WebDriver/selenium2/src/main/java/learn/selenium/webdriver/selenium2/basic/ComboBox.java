@@ -18,7 +18,7 @@ public class ComboBox {
 		driver.manage().window().maximize();
 		
 		driver.findElement(By.cssSelector("span.k-widget.k-combobox.k-header.k-combobox-clearable")).click();
-		driver.findElement(By.cssSelector("input.k-input.sessioncamexclude[role='combobox']")).sendKeys("Beverages" + Keys.ENTER);
+		driver.findElement(By.cssSelector("input.k-input.sessioncamexclude[role='combobox']")).sendKeys("Beverages",Keys.ENTER);
 
 		driver.findElement(By.cssSelector("ul#fieldlist li:nth-child(2)  span.k-widget.k-combobox.k-header.k-combobox-clearable")).click();
 		driver.findElement(By.cssSelector("ul#fieldlist li:nth-child(2)  span.k-widget.k-combobox.k-header.k-combobox-clearable span.k-select")).click();

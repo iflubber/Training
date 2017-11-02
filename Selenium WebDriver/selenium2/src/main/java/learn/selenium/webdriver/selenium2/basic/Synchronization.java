@@ -65,7 +65,7 @@ public class Synchronization {
 		WebElement search_result = fluentWait.until(new Function<WebDriver,WebElement>(){
 			@Override
 			public WebElement apply(WebDriver d) {
-				return driver.findElement(By.xpath("//span[contains(.,'results have been found.')]"));
+				return d.findElement(By.xpath("//span[contains(.,'results have been found.')]"));
 			}
 		});
 		
