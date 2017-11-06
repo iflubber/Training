@@ -2,8 +2,12 @@ package com.learn.bdd.steps;
 
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.learn.bdd.shopping.ApparelShopping;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -11,6 +15,12 @@ import junit.framework.Assert;
 
 public class ApparelShoppingSteps {
 	
+	@Before({"@selenium"})
+	public static void setup() {
+		System.out.println("-----Selenium Before----");
+		ApparelShopping.setup();
+	}
+		
 	@Given("^the \"(.*)\" is loaded in browser$")
 	public void launchApplication(String URL) throws Throwable {
 		ApparelShopping.launchApp(URL);
@@ -103,4 +113,11 @@ public class ApparelShoppingSteps {
 //	    // Write code here that turns the phrase above into concrete actions
 //	    throw new PendingException();
 //	}
+
+	@After({"@selenium"})
+	public static void cleanUp() {
+		System.out.println("-----Selenium After----");
+		ApparelShopping.cleanUp();
+	}
+		
 }

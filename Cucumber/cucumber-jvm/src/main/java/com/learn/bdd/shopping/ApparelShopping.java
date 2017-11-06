@@ -9,11 +9,10 @@ import cucumber.api.java.Before;
 public class ApparelShopping {
 	static WebDriver driver;
 	
-	@Before("@selenium")
 	public static void setup() {
 		driver = new FirefoxDriver();
 	}
-	
+		
 	public static void launchApp(String URL) {
 		driver.get("http://" + URL);
 		driver.manage().window().maximize();
@@ -29,5 +28,9 @@ public class ApparelShopping {
 	
 	public static void selectSize(String size) {
 		driver.findElement(By.name("layered_id_attribute_group_1")).click();
+	}
+	
+	public static void cleanUp() {
+		driver.quit();
 	}
 }

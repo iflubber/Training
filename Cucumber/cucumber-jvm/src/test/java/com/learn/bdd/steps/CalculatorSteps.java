@@ -26,8 +26,9 @@ public class CalculatorSteps {
     	System.out.println("-----The very first @Before----");
     }
     
-    @Before
+    @Before(order=1)
     public void setUp() {
+    	System.out.println("------Calculator Before------");
         calculator = new Calculator();
         results = new ArrayList<Integer>();
     }
