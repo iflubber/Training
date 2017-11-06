@@ -104,13 +104,11 @@ public class WebDriverEventHandler implements WebDriverEventListener{
  
 	}
 
-	@Override
 	public void beforeNavigateRefresh(WebDriver driver) {
 		// TODO Auto-generated method stub
 		System.out.println("Befor page refresh");
 	}
 
-	@Override
 	public void afterNavigateRefresh(WebDriver driver) {
 		// TODO Auto-generated method stub
 		System.out.println("After page refresh");

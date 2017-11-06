@@ -43,7 +43,6 @@ public class PopUpWindows {
 				.pollingEvery(5, TimeUnit.SECONDS)
 				.ignoring(NoSuchElementException.class);
 		fluentWait.until(new Function<WebDriver,Boolean>(){
-			@Override
 			public Boolean apply(WebDriver d) {
 				return d.getWindowHandles().size()>1;
 			}
@@ -68,7 +67,6 @@ public class PopUpWindows {
 		driver.findElement(By.linkText("Open New Seprate Window")).click();
 		
 		fluentWait.until(new Function<WebDriver,Boolean>(){
-			@Override
 			public Boolean apply(WebDriver d) {
 				return d.getWindowHandles().size()>2;
 			}

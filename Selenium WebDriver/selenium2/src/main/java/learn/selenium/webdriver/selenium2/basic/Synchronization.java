@@ -46,7 +46,6 @@ public class Synchronization {
 		driver.findElement(By.id("SubmitLogin")).click();
 		
 		(new WebDriverWait(driver,10)).until(new ExpectedCondition<Boolean>() {
-			@Override
 			public Boolean apply(WebDriver d) {
 				return d.getTitle().contains("My account");
 			}
@@ -63,7 +62,6 @@ public class Synchronization {
 				.pollingEvery(5, TimeUnit.SECONDS)
 				.ignoring(NoSuchElementException.class);
 		WebElement search_result = fluentWait.until(new Function<WebDriver,WebElement>(){
-			@Override
 			public WebElement apply(WebDriver d) {
 				return d.findElement(By.xpath("//span[contains(.,'results have been found.')]"));
 			}
