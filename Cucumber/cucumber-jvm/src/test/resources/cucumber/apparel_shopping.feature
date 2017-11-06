@@ -1,3 +1,4 @@
+@selenium
 Feature: Apparel Shopping
   As a regular user
   I want to be able to browse apparels of different types & attributes easily

@@ -31,6 +31,13 @@ public class CalculatorSteps {
         calculator = new Calculator();
         results = new ArrayList<Integer>();
     }
+    
+    @Given("^I have following texts:(.*)$")
+    public void stringList(List<String> texts) {
+    	for(String text: texts) {
+    		System.out.println(text);
+    	}
+    }
 
     @Given("^I have a calculator$")
     public void isCalculatorExist() throws Throwable {
@@ -52,15 +59,25 @@ public class CalculatorSteps {
         assertEquals(result, calculator.getResult());
     }
 
+//    @When("^I add the following numbers:$")
+//    public void addition(DataTable table) throws Throwable {
+//    	//Initialize data table
+////    	List<List<String>> data = table.raw();
+//    	List<Map<String,Integer>> data = table.asMaps(String.class, Integer.class);
+//    	
+//    	for(Map<String,Integer> numbers: data) {
+////    		calculator.add(Integer.parseInt(numbers.get("number1")), Integer.parseInt(numbers.get("number2")));
+//    		calculator.add(numbers.get("number1"), numbers.get("number2"));
+//    		results.add(calculator.getResult());
+//    	}
+//    }
+
     @When("^I add the following numbers:$")
-    public void addition(DataTable table) throws Throwable {
+    public void addition(List<Calculator> data) throws Throwable {
     	//Initialize data table
-//    	List<List<String>> data = table.raw();
-    	List<Map<String,Integer>> data = table.asMaps(String.class, Integer.class);
-    	
-    	for(Map<String,Integer> numbers: data) {
-//    		calculator.add(Integer.parseInt(numbers.get("number1")), Integer.parseInt(numbers.get("number2")));
-    		calculator.add(numbers.get("number1"), numbers.get("number2"));
+    	for(Calculator calculator: data) {
+    		calculator.add();
+    		System.out.println(calculator.getResult());
     		results.add(calculator.getResult());
     	}
     }

@@ -5,6 +5,7 @@ Feature: Calculator
 
   @add	
   Scenario: Add two numbers
+  	Given I have following texts:one,two,three
     Given I have a calculator
     When I add 2 and 3
     Then the result should be 5

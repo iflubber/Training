@@ -7,7 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverFactoryExample {
-	protected static WebDriver driver;
+	protected WebDriver driver;
 	
 	public DriverFactoryExample() {
 		initialize();
